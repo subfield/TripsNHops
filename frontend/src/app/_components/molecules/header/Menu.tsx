@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import * as T from "@/types"
 // import { DownIcon } from "../../atoms/Icons";
 // import { isActive } from "./Nav";
@@ -16,7 +15,6 @@ import {
 
 
 export const SubNav = ({ id, title, subNavs }: T.NavSubNavProps) => {
-    const [isOpen, setIsOpen] = useState(true);
     return <>
         <NavigationMenu defaultValue="open">
             <NavigationMenuList>
