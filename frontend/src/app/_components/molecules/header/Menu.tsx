@@ -31,7 +31,7 @@ export const SubNav = ({ id, title, subNavs }: T.NavSubNavProps) => {
                     >
                         <div className="!rounded-lg !bg-background !shadow-lg !border !border-mecury !min-w-[260px] !py-5 !px-10 space-y-3">
                         {subNavs.map((item, index) => (
-                            <div key={`menu${index}`} className="relative !text-gray-500">
+                            <div key={`menu${index}-${id}`} className="relative !text-gray-500">
                                 <Link href={item.href} className="flex items-center justify-between w-full">{item.title}</Link>
                             </div>
                         ))}

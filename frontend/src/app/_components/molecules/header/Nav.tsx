@@ -26,7 +26,7 @@ export default Nav
 const LinkTitle: React.FC<T.TitleLinkProps> = ({ id, title, href = "" }) => {
 
     return (
-        <Link href={href} className={`${isActive.value ? "text-primary-500" : "text-gray-500"} transition-all duration-200 hover:text-primary-500 flex items-center justify-center w-full`}>
+        <Link href={href} className={`${isActive.value ? "text-primary-500" : "text-gray-500"} ${id} transition-all duration-200 hover:text-primary-500 flex items-center justify-center w-full`}>
             {title}
         </Link>
 
