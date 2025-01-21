@@ -1,4 +1,6 @@
 import { LucideIcon } from "lucide-react";
+import { StaticImageData } from "next/image";
+
 
 export interface InputProps {
   type?: string;
@@ -71,10 +73,31 @@ export interface megaNavProps {
 }
 
 export interface SectionProps {
-  padding: "top" | "top-bottom" | "none";
-  bg: "dark" | "light" | "neutral";
-  title: string;
-  link: string;
+  padding?: "top" | "top-bottom" | "none";
+  bg?: "dark" | "light" | "neutral";
+  title?: string;
+  link?: string;
   children: React.ReactNode;
-  className: string;
+  className?: string;
 }
+
+export interface ProductCardProps {
+  title: string;
+  price: string;
+  location: string;
+  link: string;
+  isFav: boolean;
+  days: number;
+  img: StaticImageData;
+  review: {
+    reviews: number;
+    stars: number;
+  };
+}
+
+export type HeaderProps = Pick<ProductCardProps, "img" | "isFav">;
+
+export type FooterProps = Pick<ProductCardProps, "title" | "price" | "location" | "days" | "review">;
+
+export type LikeBtnProps = Pick<HeaderProps, "isFav">;
+

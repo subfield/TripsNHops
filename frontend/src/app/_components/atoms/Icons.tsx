@@ -1,4 +1,4 @@
-import { CalendarCheck2, ChevronDown, Flag, Headset, Mail, MapPin, Menu, Search, Send, SquareArrowOutUpRight, User } from "lucide-react";
+import { CalendarCheck2, ChevronDown, Clock4, Flag, Headset, Heart, Mail, MapPin, Menu, Search, Send, SquareArrowOutUpRight, Star, StarHalf, User } from "lucide-react";
 import { RiFacebookFill, RiInstagramLine, RiTwitterXFill } from "react-icons/ri";
 import { ImAndroid, ImAppleinc } from "react-icons/im";
 import * as T from "@/types"
@@ -46,6 +46,22 @@ export const MailIcon: React.FC<T.IconProps> = ({ className }) => {
 
 export const SendIcon: React.FC<T.IconProps> = ({ className }) => {
     return <Send className={className} /> 
+}
+
+export const HeartIcon: React.FC<T.IconProps> = ({ className }) => {
+    return <Heart className={className} /> 
+}
+
+export const StarIcon: React.FC<T.IconProps> = ({ className }) => {
+    return <Star className={className} /> 
+}
+
+export const StarHalfIcon: React.FC<T.IconProps> = ({ className }) => {
+    return <StarHalf className={className} /> 
+}
+
+export const Clock4Icon: React.FC<T.IconProps> = ({ className }) => {
+    return <Clock4 className={className} /> 
 }
 
 

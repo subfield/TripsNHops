@@ -46,6 +46,12 @@ export default {
         soft: "#f1ecf2",
         mecury: "#e7e6e6",
       },
+      backgroundImage: {
+        "custom-gradient": "linear-gradient(90deg, #000 0, #000)",
+      },
+      transitionTimingFunction: {
+        "custom-ease": "cubic-bezier(.785,.135,.15,.86)",
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],
