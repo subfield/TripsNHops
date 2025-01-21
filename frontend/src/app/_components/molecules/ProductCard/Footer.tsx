@@ -1,13 +1,10 @@
-"use client"
 
 import { LocationIcon, StarIcon, StarHalfIcon, Clock4Icon } from "../../atoms/Icons"
 import { Separator } from "@/components/ui/separator"
-import useDeviceSize from "@/hooks/useMediaQuery"
 import * as T from "@/types"
 import { Fragment } from "react"
 
 const Footer = ({ title, price, location, days, review }: T.FooterProps) => {
-    const size = useDeviceSize()
     return (
         <>
             <div className="flex-x gap-1">

@@ -1,5 +1,4 @@
 import Image from "next/image"
-import { StaticImageData } from "next/image"
 import LikeButton from "./LikeButton"
 import * as T from "@/types"
 

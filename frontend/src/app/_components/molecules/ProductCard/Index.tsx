@@ -1,4 +1,3 @@
-import { Img } from "@/assets/image"
 import Header from "./Header"
 import Link from "next/link"
 import Footer from "./Footer"

@@ -2,7 +2,6 @@ import Link from "next/link"
 import Section from "../../atoms/Section"
 import { Img } from "@/assets/image"
 import Image from "next/image"
-import { title } from "process"
 
 const TrendData = [
   {

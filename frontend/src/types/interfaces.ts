@@ -95,8 +95,9 @@ export interface ProductCardProps {
   };
 }
 
-export interface HeaderProps extends Pick<ProductCardProps, "img" | "isFav"> {}
+export type HeaderProps = Pick<ProductCardProps, "img" | "isFav">;
 
-export interface FooterProps extends Pick<ProductCardProps, "title" | "price" | "location" | "days" | "review"> { }
+export type FooterProps = Pick<ProductCardProps, "title" | "price" | "location" | "days" | "review">;
 
-export interface LikeBtnProps extends Pick<HeaderProps, "isFav"> {}
+export type LikeBtnProps = Pick<HeaderProps, "isFav">;
+
