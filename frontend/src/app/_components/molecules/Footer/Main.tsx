@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button"
 const Main = () => {
     return (
         <div className="relative z-0">
-            <div className="absolute left-0 right-0 md:left-[-20px] md:right-[-20px] -z-[1]">
+            <div className="absolute left-0 right-0 -z-[1]">
                 <Image src={Img.footerSvg} alt="footerSvg" width={1800} height={627} className="w-full h-full max-w-full align-middle object-cover" loading="lazy" style={{ color: "transparent" }} />
             </div>
             <div className="divContainer">

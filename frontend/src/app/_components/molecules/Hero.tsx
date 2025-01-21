@@ -4,7 +4,7 @@ import { LocationIcon, CalendarCheck2Icon, FlagIcon, SearchIcon } from "../atoms
 
 const Hero = () => {
   return (
-    <section className="relative z-[5] pt-[120px] pb-[40px] sm:pd-[200px] md:pd-[400px] lg:pt-[134px] lg:pb-[472px]">
+    <div className="relative z-[5] pt-[120px] pb-[40px] sm:pd-[200px] md:pd-[400px] lg:pt-[134px] lg:pb-[472px]">
       <div className="absolute top-0 left-0 w-full h-full z-[-1]">
         <Image
           src={Img.hero}
@@ -75,7 +75,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   )
 }
 
