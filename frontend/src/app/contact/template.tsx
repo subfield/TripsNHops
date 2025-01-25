@@ -1,4 +1,4 @@
-export default function template({
+export default function ContactTemplate({
   children,
 }: Readonly<{
   children: React.ReactNode;

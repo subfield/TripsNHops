@@ -1,7 +1,7 @@
-import FooterIndex from '../molecules/Footer/Index'
+import FooterIndex from "../molecules/Footer/Index";
 
 const Footer = () => {
-  return <FooterIndex />
-}
+  return <FooterIndex />;
+};
 
-export default Footer
+export default Footer;

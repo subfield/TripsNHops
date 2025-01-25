@@ -1,37 +1,37 @@
-"use client"
+"use client";
 
 import { useState, useEffect } from "react";
 
 type DeviceSize = "sm" | "md" | "lg" | "null";
 
 const useDeviceSize = (): DeviceSize => {
-    const [deviceSize, setDeviceSize] = useState<DeviceSize>("null");
+  const [deviceSize, setDeviceSize] = useState<DeviceSize>("null");
 
-    const checkDeviceSize = () => {
-        if (window.matchMedia("(max-width: 640px)").matches) {
-            setDeviceSize("sm");
-        } else if (window.matchMedia("(max-width: 1024px)").matches) {
-            setDeviceSize("md");
-        } else {
-            setDeviceSize("lg");
-        }
+  const checkDeviceSize = () => {
+    if (window.matchMedia("(max-width: 640px)").matches) {
+      setDeviceSize("sm");
+    } else if (window.matchMedia("(max-width: 1024px)").matches) {
+      setDeviceSize("md");
+    } else {
+      setDeviceSize("lg");
+    }
+  };
+
+  useEffect(() => {
+    checkDeviceSize();
+
+    const handleResize = () => {
+      checkDeviceSize();
     };
 
-    useEffect(() => {
-        checkDeviceSize();
+    window.addEventListener("resize", handleResize);
 
-        const handleResize = () => {
-            checkDeviceSize();
-        };
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
-        window.addEventListener("resize", handleResize);
-
-        return () => {
-            window.removeEventListener("resize", handleResize);
-        };
-    }, []);
-
-    return deviceSize;
+  return deviceSize;
 };
 
 export default useDeviceSize;

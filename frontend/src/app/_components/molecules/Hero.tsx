@@ -1,6 +1,11 @@
-import Image from "next/image"
-import { Img } from '@/assets/image/index';
-import { LocationIcon, CalendarCheck2Icon, FlagIcon, SearchIcon } from "../atoms/Icons";
+import Image from "next/image";
+import { Img } from "@/assets/image/index";
+import {
+  LocationIcon,
+  CalendarCheck2Icon,
+  FlagIcon,
+  SearchIcon,
+} from "../atoms/Icons";
 
 const Hero = () => {
   return (
@@ -59,9 +64,7 @@ const Hero = () => {
                     </div>
                     <div className="ml-2.5">
                       <h5 className="font-medium text-base">Tour Type</h5>
-                      <div className="text-sm text-[#717171]">
-                        All tour
-                      </div>
+                      <div className="text-sm text-[#717171]">All tour</div>
                     </div>
                   </div>
                 </div>
@@ -76,7 +79,7 @@ const Hero = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;

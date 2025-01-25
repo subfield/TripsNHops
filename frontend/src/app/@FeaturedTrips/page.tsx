@@ -1,7 +1,7 @@
-import FeatureTrips from "../_components/organisms/HomePage/FeatureTrips"
+import FeatureTrips from "../_components/organisms/HomePage/FeatureTrips";
 
 const page = () => {
-  return <FeatureTrips />
-}
+  return <FeatureTrips />;
+};
 
-export default page
+export default page;
