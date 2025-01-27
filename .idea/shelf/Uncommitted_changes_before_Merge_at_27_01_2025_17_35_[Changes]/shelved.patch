@@ -1,0 +1,437 @@
+Index: frontend/src/app/page.tsx
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import SpecialOffers from \"./_components/organisms/HomePage/SpecialOffers\";\r\nimport PopularThings from \"./_components/organisms/HomePage/PopularThings\";\r\n\r\nexport default function Home() {\r\n  return (\r\n    <>\r\n      <SpecialOffers />\r\n      <PopularThings />\r\n    </>\r\n  );\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/frontend/src/app/page.tsx b/frontend/src/app/page.tsx
+--- a/frontend/src/app/page.tsx	(revision edcc94b1e9d6c227c77b8dbfc7a7dd82253c6243)
++++ b/frontend/src/app/page.tsx	(date 1737995695872)
+@@ -1,11 +1,19 @@
+ import SpecialOffers from "./_components/organisms/HomePage/SpecialOffers";
+ import PopularThings from "./_components/organisms/HomePage/PopularThings";
++import Hero from "@/app/_components/molecules/Hero";
++import FeatureTrips from "@/app/_components/organisms/HomePage/FeatureTrips";
++import TrendingDestinations from "@/app/_components/organisms/HomePage/TrendingDestinations";
++import SectionA from "@/app/_components/organisms/HomePage/SectionA";
+ 
+ export default function Home() {
+   return (
+     <>
+-      <SpecialOffers />
+-      <PopularThings />
++      <Hero/>
++      <SpecialOffers/>
++      <PopularThings/>
++      <FeatureTrips/>
++      <TrendingDestinations/>
++      <SectionA/>
+     </>
+   );
+ }
+Index: frontend/src/app/template.tsx
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>export default function template({\r\n  children,\r\n}: Readonly<{\r\n  children: React.ReactNode;\r\n}>) {\r\n  return <>{children}</>;\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/frontend/src/app/template.tsx b/frontend/src/app/template.tsx
+--- a/frontend/src/app/template.tsx	(revision edcc94b1e9d6c227c77b8dbfc7a7dd82253c6243)
++++ b/frontend/src/app/template.tsx	(date 1737995695873)
+@@ -1,7 +1,17 @@
++import Header from "@/app/_components/organisms/Header";
++import Footer from "@/app/_components/organisms/Footer";
++
+ export default function template({
+   children,
+ }: Readonly<{
+   children: React.ReactNode;
+ }>) {
+-  return <>{children}</>;
++  return <>
++    <main>
++      <>
++        <Header />
++        {children}
++        <Footer />
++      </>
++    </main></>;
+ }
+Index: frontend/src/app/contact/page.tsx
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\"use client\";\r\n\r\nimport Button from \"../_components/atoms/Button\";\r\nimport Input from \"../_components/atoms/Input\";\r\n\r\nexport default function Contact() {\r\n  \r\n\r\n  return (\r\n    <section className=\"mt-[500px]\">\r\n      <Input/>\r\n      <Button>Send Message</Button>\r\n    </section>\r\n  );\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/frontend/src/app/contact/page.tsx b/frontend/src/app/contact/page.tsx
+--- a/frontend/src/app/contact/page.tsx	(revision edcc94b1e9d6c227c77b8dbfc7a7dd82253c6243)
++++ b/frontend/src/app/contact/page.tsx	(date 1737995695862)
+@@ -1,15 +1,16 @@
+-"use client";
++import type { Metadata } from "next";
++import Section from "@/app/_components/atoms/Section";
++import ContactPage from "@/app/_components/organisms/HomePage/ContactPage";
+ 
+-import Button from "../_components/atoms/Button";
+-import Input from "../_components/atoms/Input";
++export const metadata: Metadata = {
++    title: "Contact Us",
++};
+ 
+ export default function Contact() {
+-  
+ 
+-  return (
+-    <section className="mt-[500px]">
+-      <Input/>
+-      <Button>Send Message</Button>
+-    </section>
+-  );
++    return (
++        <Section padding={"top-bottom"} bg={"light"}>
++            <ContactPage/>
++        </Section>
++    );
+ }
+Index: frontend/src/app/contact/template.tsx
+===================================================================
+diff --git a/frontend/src/app/contact/template.tsx b/frontend/src/app/contact/template.tsx
+deleted file mode 100644
+--- a/frontend/src/app/contact/template.tsx	(revision edcc94b1e9d6c227c77b8dbfc7a7dd82253c6243)
++++ /dev/null	(revision edcc94b1e9d6c227c77b8dbfc7a7dd82253c6243)
+@@ -1,7 +0,0 @@
+-export default function ContactTemplate({
+-  children,
+-}: Readonly<{
+-  children: React.ReactNode;
+-}>) {
+-  return <>{children}</>;
+-}
+Index: frontend/src/app/contact/layout.tsx
+===================================================================
+diff --git a/frontend/src/app/contact/layout.tsx b/frontend/src/app/contact/layout.tsx
+deleted file mode 100644
+--- a/frontend/src/app/contact/layout.tsx	(revision edcc94b1e9d6c227c77b8dbfc7a7dd82253c6243)
++++ /dev/null	(revision edcc94b1e9d6c227c77b8dbfc7a7dd82253c6243)
+@@ -1,17 +0,0 @@
+-import Header from "../_components/organisms/Header";
+-import Footer from "../_components/organisms/Footer";
+-export default function ContactLayout({
+-  children,
+-}: Readonly<{ children: React.ReactNode }>) {
+-  return (
+-    <html lang="en">
+-      <body>
+-        <Header />
+-        <main>
+-          <>{children}</>
+-        </main>
+-        <Footer />
+-      </body>
+-    </html>
+-  );
+-}
+Index: .idea/tripsnhops.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/tripsnhops.iml b/.idea/tripsnhops.iml
+new file mode 100644
+--- /dev/null	(date 1737995695855)
++++ b/.idea/tripsnhops.iml	(date 1737995695855)
+@@ -0,0 +1,12 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="WEB_MODULE" version="4">
++  <component name="NewModuleRootManager">
++    <content url="file://$MODULE_DIR$">
++      <excludeFolder url="file://$MODULE_DIR$/.tmp" />
++      <excludeFolder url="file://$MODULE_DIR$/temp" />
++      <excludeFolder url="file://$MODULE_DIR$/tmp" />
++    </content>
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++</module>
+\ No newline at end of file
+Index: frontend/src/app/_components/organisms/HomePage/ContactPage.tsx
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/frontend/src/app/_components/organisms/HomePage/ContactPage.tsx b/frontend/src/app/_components/organisms/HomePage/ContactPage.tsx
+new file mode 100644
+--- /dev/null	(date 1737995695861)
++++ b/frontend/src/app/_components/organisms/HomePage/ContactPage.tsx	(date 1737995695861)
+@@ -0,0 +1,14 @@
++"use client"
++
++import Input from "@/app/_components/atoms/Input";
++import {Button} from "@/components/ui/button";
++
++const ContactPage = () => {
++  return (
++    <>
++      <Input/>
++      <Button>Send Message</Button>
++    </>
++  )
++}
++export default ContactPage
+\ No newline at end of file
+Index: .idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/modules.xml b/.idea/modules.xml
+new file mode 100644
+--- /dev/null	(date 1737995695854)
++++ b/.idea/modules.xml	(date 1737995695854)
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectModuleManager">
++    <modules>
++      <module fileurl="file://$PROJECT_DIR$/.idea/tripsnhops.iml" filepath="$PROJECT_DIR$/.idea/tripsnhops.iml" />
++    </modules>
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+new file mode 100644
+--- /dev/null	(date 1737995695856)
++++ b/.idea/vcs.xml	(date 1737995695856)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="" vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
+Index: frontend/src/app/globals.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>@tailwind base;\r\n@tailwind components;\r\n@tailwind utilities;\r\n\r\n:root {\r\n  --tnh-background-100: 0, 9%, 100%;\r\n  --tnh-background-200: 0, 9%, 98%;\r\n  --tnh-primary: 18, 83%, 55%;\r\n  --tnh-secondary: 238, 85%, 13%;\r\n}\r\n\r\n@media (prefers-color-scheme: dark) {\r\n  :root {\r\n    --tnh-background-100: 0, 9%, 100%;\r\n    --tnh-background-200: 0, 9%, 98%;\r\n    /* --tnh-background-100: 0,0%,4%;\r\n      --tnh-background-200: 0,0%,0%; */\r\n    --tnh-primary: 18, 83%, 55%;\r\n    --tnh-secondary: 238, 85%, 13%;\r\n    --tnh-gray-100: 0, 0%, 10%;\r\n    --tnh-gray-200: 0, 0%, 12%;\r\n    --tnh-gray-300: 0, 0%, 16%;\r\n    --tnh-gray-400: 0, 0%, 18%;\r\n    --tnh-gray-500: 0, 0%, 27%;\r\n    --tnh-gray-600: 0, 0%, 53%;\r\n    --tnh-gray-700: 0, 0%, 56%;\r\n    --tnh-gray-800: 0, 0%, 49%;\r\n    --tnh-gray-900: 0, 0%, 63%;\r\n    --tnh-gray-1000: 0, 0%, 93%;\r\n    --tnh-blue-100: 216, 50%, 12%;\r\n    --tnh-blue-200: 214, 59%, 15%;\r\n    --tnh-blue-300: 213, 71%, 20%;\r\n    --tnh-blue-400: 212, 78%, 23%;\r\n    --tnh-blue-500: 211, 86%, 27%;\r\n    --tnh-blue-600: 206, 100%, 50%;\r\n    --tnh-blue-700: 212, 100%, 48%;\r\n    --tnh-blue-800: 212, 100%, 41%;\r\n    --tnh-blue-900: 210, 100%, 66%;\r\n    --tnh-blue-1000: 206, 100%, 96%;\r\n    --tnh-red-100: 357, 37%, 12%;\r\n    --tnh-red-200: 357, 46%, 16%;\r\n    --tnh-red-300: 356, 54%, 22%;\r\n    --tnh-red-400: 357, 55%, 26%;\r\n    --tnh-red-500: 357, 60%, 32%;\r\n    --tnh-red-600: 358, 75%, 59%;\r\n    --tnh-red-700: 358, 75%, 59%;\r\n    --tnh-red-800: 358, 69%, 52%;\r\n    --tnh-red-900: 358, 100%, 69%;\r\n    --tnh-red-1000: 353, 90%, 96%;\r\n    --tnh-amber-100: 35, 100%, 8%;\r\n    --tnh-amber-200: 32, 100%, 10%;\r\n    --tnh-amber-300: 33, 100%, 15%;\r\n    --tnh-amber-400: 35, 100%, 17%;\r\n    --tnh-amber-500: 35, 91%, 22%;\r\n    --tnh-amber-600: 39, 85%, 49%;\r\n    --tnh-amber-700: 39, 100%, 57%;\r\n    --tnh-amber-800: 35, 100%, 52%;\r\n    --tnh-amber-900: 39, 90%, 50%;\r\n    --tnh-amber-1000: 40, 94%, 93%;\r\n    --tnh-green-100: 136, 50%, 9%;\r\n    --tnh-green-200: 137, 50%, 12%;\r\n    --tnh-green-300: 136, 50%, 14%;\r\n    --tnh-green-400: 135, 70%, 16%;\r\n    --tnh-green-500: 135, 70%, 23%;\r\n    --tnh-green-600: 135, 70%, 34%;\r\n    --tnh-green-700: 131, 41%, 46%;\r\n    --tnh-green-800: 132, 43%, 39%;\r\n    --tnh-green-900: 131, 43%, 57%;\r\n    --tnh-green-1000: 136, 73%, 94%;\r\n    --tnh-teal-100: 169, 78%, 7%;\r\n    --tnh-teal-200: 170, 74%, 9%;\r\n    --tnh-teal-300: 171, 75%, 13%;\r\n    --tnh-teal-400: 171, 85%, 13%;\r\n    --tnh-teal-500: 172, 85%, 20%;\r\n    --tnh-teal-600: 172, 85%, 32%;\r\n    --tnh-teal-700: 173, 80%, 36%;\r\n    --tnh-teal-800: 173, 83%, 30%;\r\n    --tnh-teal-900: 174, 90%, 41%;\r\n    --tnh-teal-1000: 166, 71%, 93%;\r\n    --tnh-purple-100: 283, 30%, 12%;\r\n    --tnh-purple-200: 281, 38%, 16%;\r\n    --tnh-purple-300: 279, 44%, 23%;\r\n    --tnh-purple-400: 277, 46%, 28%;\r\n    --tnh-purple-500: 274, 49%, 35%;\r\n    --tnh-purple-600: 272, 51%, 54%;\r\n    --tnh-purple-700: 272, 51%, 54%;\r\n    --tnh-purple-800: 272, 47%, 45%;\r\n    --tnh-purple-900: 275, 80%, 71%;\r\n    --tnh-purple-1000: 281, 73%, 96%;\r\n    --tnh-pink-100: 335, 32%, 12%;\r\n    --tnh-pink-200: 335, 43%, 16%;\r\n    --tnh-pink-300: 335, 47%, 21%;\r\n    --tnh-pink-400: 335, 51%, 22%;\r\n    --tnh-pink-500: 335, 57%, 27%;\r\n    --tnh-pink-600: 336, 75%, 40%;\r\n    --tnh-pink-700: 336, 80%, 58%;\r\n    --tnh-pink-800: 336, 74%, 51%;\r\n    --tnh-pink-900: 341, 90%, 67%;\r\n    --tnh-pink-1000: 333, 90%, 96%;\r\n    --tnh-gray-alpha-100: #ffffff0f;\r\n    --tnh-gray-alpha-200: #ffffff17;\r\n    --tnh-gray-alpha-300: #ffffff21;\r\n    --tnh-gray-alpha-400: #ffffff24;\r\n    --tnh-gray-alpha-500: #ffffff3d;\r\n    --tnh-gray-alpha-600: #ffffff82;\r\n    --tnh-gray-alpha-700: #ffffff8a;\r\n    --tnh-gray-alpha-800: #ffffff78;\r\n    --tnh-gray-alpha-900: #ffffff9c;\r\n    --tnh-gray-alpha-1000: #ffffffeb;\r\n    --tnh-focus-border: 0 0 0 1px var(--tnh-gray-alpha-600),\r\n      0px 0px 0px 4px #ffffff3d;\r\n    --tnh-focus-color: var(--tnh-blue-900);\r\n    --tnh-shadow-border-inset: inset 0 0 0 1px #ffffff1a;\r\n  }\r\n}\r\n\r\n.-tnp-header {\r\n  @apply fixed top-0 left-0 right-0 z-[1000] transition duration-200 ease-in-out;\r\n}\r\n\r\n.-tnh-shadow {\r\n  @apply shadow-[0_10px_40px_0_rgba(0,0,0,0.05)];\r\n}\r\n\r\n.-tnh-hero__title {\r\n  font-weight: 600;\r\n  font-size: 60px;\r\n  line-height: 1.2;\r\n  background: linear-gradient(97deg, #ee8c61 27.01%, #4c43c4 87.3%);\r\n  background-clip: text;\r\n  -webkit-background-clip: text;\r\n  -webkit-text-fill-color: transparent;\r\n}\r\n\r\n@media (max-width: 767px) {\r\n  .-tnh-hero__title {\r\n    font-size: 50px;\r\n  }\r\n}\r\n\r\n@media (max-width: 575px) {\r\n  .-tnh-hero__title {\r\n    font-size: 36px;\r\n  }\r\n}\r\n\r\n.flex-x-y-y {\r\n  @apply flex justify-between items-center;\r\n}\r\n.flex-x-y {\r\n  @apply flex justify-center items-center;\r\n}\r\n\r\n.flex-x {\r\n  @apply flex items-center;\r\n}\r\n\r\n.flex-y {\r\n  @apply flex justify-center;\r\n}\r\n\r\nsection > div:first-child {\r\n  @apply !container !mx-auto !px-5;\r\n}\r\n\r\n.-tnp-feature::after {\r\n  content: \"\";\r\n  @apply absolute top-0 bottom-0 left-0 right-0 z-[1] opacity-50;\r\n  background: linear-gradient(180deg, rgba(5, 7, 60, 0), #05073c);\r\n}\r\n\r\n.-tnp-feature img:hover {\r\n  @apply transition duration-700 hover:scale-[1.15];\r\n}\r\n\r\n.-tnp-special::after {\r\n  content: \"\";\r\n  @apply absolute top-0 bottom-0 left-0 right-0 z-[1] opacity-30;\r\n  background: linear-gradient(270deg, rgba(5, 7, 60, 0), #05073c);\r\n}\r\n\r\n.-tnh-card-bg {\r\n  background-size: 100% 1px;\r\n      background-repeat: no-repeat;\r\n    background-image: linear-gradient(90deg, #000 0, #000);\r\n    background-position: 0 95%;\r\n    background-size: 0 1px;\r\n    transition: background-size .25s cubic-bezier(.785,.135,.15,.86) 0s;\r\n    padding: .1% 0;\r\n}\r\n/* .-tnh-card-bg {\r\n  background-size: 100% 1px;\r\n  @apply bg-no-repeat bg-custom-gradient;\r\n  background-position: 0 95%;\r\n  background-size: 0 1px;\r\n  transition: background-size 0.25s cubic-bezier(0.785, 0.135, 0.15, 0.86);\r\n} */\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/frontend/src/app/globals.css b/frontend/src/app/globals.css
+--- a/frontend/src/app/globals.css	(revision edcc94b1e9d6c227c77b8dbfc7a7dd82253c6243)
++++ b/frontend/src/app/globals.css	(date 1737995695870)
+@@ -159,7 +159,7 @@
+   @apply flex justify-center;
+ }
+ 
+-section > div:first-child {
++section > div:first-child, .divContainer {
+   @apply !container !mx-auto !px-5;
+ }
+ 
+Index: .idea/inspectionProfiles/Project_Default.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/inspectionProfiles/Project_Default.xml b/.idea/inspectionProfiles/Project_Default.xml
+new file mode 100644
+--- /dev/null	(date 1737995695853)
++++ b/.idea/inspectionProfiles/Project_Default.xml	(date 1737995695853)
+@@ -0,0 +1,6 @@
++<component name="InspectionProjectProfileManager">
++  <profile version="1.0">
++    <option name="myName" value="Project Default" />
++    <inspection_tool class="Eslint" enabled="true" level="WARNING" enabled_by_default="true" />
++  </profile>
++</component>
+\ No newline at end of file
+Index: .idea/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/.gitignore b/.idea/.gitignore
+new file mode 100644
+--- /dev/null	(date 1737995695852)
++++ b/.idea/.gitignore	(date 1737995695852)
+@@ -0,0 +1,8 @@
++# Default ignored files
++/shelf/
++/workspace.xml
++# Editor-based HTTP Client requests
++/httpRequests/
++# Datasource local storage ignored files
++/dataSources/
++/dataSources.local.xml
+Index: frontend/src/app/_components/atoms/Input.tsx
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import * as L from \"@/app/_libs\";\r\nimport * as T from \"@/types\";\r\n\r\nconst isFocused = L.S<boolean>(!!0);\r\n\r\nconst Input: React.FC<T.InputProps> = ({\r\n  type = \"text\",\r\n  placeholder = \"\",\r\n  value,\r\n  onChange,\r\n  disabled = !!0,\r\n  error,\r\n  className = \"\",\r\n  label,\r\n  required = !!0,\r\n  icon: Icon,\r\n  onIconClick,\r\n}) => {\r\n  const setIsFocused = (value: boolean) => {\r\n    isFocused.value = value;\r\n  };\r\n\r\n  return (\r\n    <div className=\"flex flex-col gap-2\">\r\n      {label && (\r\n        <label className=\"text-sm font-medium text-gray-700\">\r\n          {label} {required && <span className=\"text-red-500\">*</span>}\r\n        </label>\r\n      )}\r\n      <div className=\"relative flex items-center w-full\">\r\n        <input\r\n          type={type}\r\n          placeholder={placeholder}\r\n          value={value}\r\n          onChange={onChange}\r\n          disabled={disabled}\r\n          onFocus={() => setIsFocused(!!1)}\r\n          onBlur={() => setIsFocused(!!0)}\r\n          className={`w-full pl-4 pr-10 py-3 border rounded-xl hover:border-primary-300 focus:outline-none focus:border-primary-400 focus:ring-1 focus:ring-primary-400 transition-all duration-300 ease-in-out placeholder-primary-400 placeholder:italic focus:placeholder-primary-200 ${\r\n            disabled\r\n              ? \"bg-primary-100 text-primary-800 border-primary-300 cursor-not-allowed\"\r\n              : \"bg-primary-50 text-primary-400\"\r\n          } ${error ? \"border-red-800\" : \"border-primary-200\"} ${className}`}\r\n        />\r\n        {Icon && (\r\n          <button\r\n            type=\"button\"\r\n            onClick={onIconClick}\r\n            disabled={disabled}\r\n            className={`absolute right-3 transition-all duration-300 ease-in-out ${\r\n              disabled\r\n                ? \"cursor-not-allowed text-primary-200\"\r\n                : isFocused.value\r\n                ? \"text-primary-200\"\r\n                : \"text-primary-400\"\r\n            }`}\r\n          >\r\n            <Icon size={20} />\r\n          </button>\r\n        )}\r\n      </div>\r\n      {error && <p className=\"text-sm text-red-500\">{error}</p>}\r\n    </div>\r\n  );\r\n};\r\n\r\nexport default Input;\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/frontend/src/app/_components/atoms/Input.tsx b/frontend/src/app/_components/atoms/Input.tsx
+--- a/frontend/src/app/_components/atoms/Input.tsx	(revision edcc94b1e9d6c227c77b8dbfc7a7dd82253c6243)
++++ b/frontend/src/app/_components/atoms/Input.tsx	(date 1737995695857)
+@@ -36,7 +36,7 @@
+           disabled={disabled}
+           onFocus={() => setIsFocused(!!1)}
+           onBlur={() => setIsFocused(!!0)}
+-          className={`w-full pl-4 pr-10 py-3 border rounded-xl hover:border-primary-300 focus:outline-none focus:border-primary-400 focus:ring-1 focus:ring-primary-400 transition-all duration-300 ease-in-out placeholder-primary-400 placeholder:italic focus:placeholder-primary-200 ${
++          className={`w-full pl-4 pr-10 py-2 border rounded-xl hover:border-primary-300 focus:outline-none focus:border-primary-400 focus:ring-1 focus:ring-primary-400 transition-all duration-300 ease-in-out placeholder-primary-400 placeholder:italic focus:placeholder-primary-200 ${
+             disabled
+               ? "bg-primary-100 text-primary-800 border-primary-300 cursor-not-allowed"
+               : "bg-primary-50 text-primary-400"
+Index: frontend/src/app/_components/molecules/header/Index.tsx
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import HeaderLarge from \"./Large\"\r\nimport Mobile from \"./Mobile\"\r\n\r\nconst HeaderIndex = () => {\r\n    return (\r\n        <div className=\"container mx-auto px-1 w-full flex items-center justify-center h-[57px] lg:h-[88px]\">\r\n            <HeaderLarge />\r\n            <Mobile />\r\n        </div>\r\n    )\r\n}\r\n\r\nexport default HeaderIndex
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/frontend/src/app/_components/molecules/header/Index.tsx b/frontend/src/app/_components/molecules/header/Index.tsx
+--- a/frontend/src/app/_components/molecules/header/Index.tsx	(revision edcc94b1e9d6c227c77b8dbfc7a7dd82253c6243)
++++ b/frontend/src/app/_components/molecules/header/Index.tsx	(date 1737995695858)
+@@ -3,9 +3,9 @@
+ 
+ const HeaderIndex = () => {
+     return (
+-        <div className="container mx-auto px-1 w-full flex items-center justify-center h-[57px] lg:h-[88px]">
+-            <HeaderLarge />
+-            <Mobile />
++        <div className="divContainer flex-x h-[57px] lg:h-[88px]">
++            <HeaderLarge/>
++            <Mobile/>
+         </div>
+     )
+ }
+Index: frontend/src/app/_components/molecules/header/Large.tsx
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import { SearchIcon } from \"lucide-react\";\r\nimport Input from \"../../atoms/Input\";\r\nimport Nav from \"./Nav\";\r\nimport Button from \"../../atoms/Button\";\r\n\r\nconst HeaderLarge = () => {\r\n  return (\r\n    <div className=\"hidden lg:flex items-center gap-5 space-x-5\">\r\n      <h1 className=\"text-primary font-bold text-2xl\">Trips n Hops</h1>\r\n      <div className=\"flex items-center justify-between gap-5 \">\r\n        <Input\r\n          type=\"search\"\r\n          placeholder=\"Search destinations or activities\"\r\n          icon={SearchIcon}\r\n        />\r\n        <div className=\"mx-5\">\r\n          <Nav\r\n            menu={[\r\n              {\r\n                title: \"About\",\r\n                href: \"/about\",\r\n              },\r\n              {\r\n                title: \"Contact\",\r\n                href: \"/contact\",\r\n              },\r\n              {\r\n                title: \"Explore\",\r\n                hasSubNav: !!1,\r\n                subNav: [\r\n                  {\r\n                    title: \"Destinations\",\r\n                    href: \"/explore/destinations\",\r\n                  },\r\n                  {\r\n                    title: \"Activities\",\r\n                    href: \"/explore/activities\",\r\n                  },\r\n                  {\r\n                    title: \"Trips\",\r\n                    href: \"/explore/trips\",\r\n                  },\r\n                ],\r\n              },\r\n            ]}\r\n          />\r\n        </div>\r\n      </div>\r\n      <div className=\"flex items-center justify-between ow-full\">\r\n        <Nav\r\n          menu={[\r\n            {\r\n              title: \"ETH\",\r\n              hasSubNav: !!1,\r\n              subNav: [\r\n                {\r\n                  title: \"ETH\",\r\n                  href: \"/explore/destinations\",\r\n                },\r\n                {\r\n                  title: \"BNB\",\r\n                  href: \"/explore/activities\",\r\n                },\r\n              ],\r\n            },\r\n          ]}\r\n        />\r\n        <Button>Login</Button>\r\n      </div>\r\n    </div>\r\n  );\r\n};\r\n\r\nexport default HeaderLarge;\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/frontend/src/app/_components/molecules/header/Large.tsx b/frontend/src/app/_components/molecules/header/Large.tsx
+--- a/frontend/src/app/_components/molecules/header/Large.tsx	(revision edcc94b1e9d6c227c77b8dbfc7a7dd82253c6243)
++++ b/frontend/src/app/_components/molecules/header/Large.tsx	(date 1737995695859)
+@@ -5,7 +5,7 @@
+ 
+ const HeaderLarge = () => {
+   return (
+-    <div className="hidden lg:flex items-center gap-5 space-x-5">
++    <div className="hidden w-full lg:flex items-center justify-between gap-5 space-x-5">
+       <h1 className="text-primary font-bold text-2xl">Trips n Hops</h1>
+       <div className="flex items-center justify-between gap-5 ">
+         <Input
+@@ -46,7 +46,7 @@
+           />
+         </div>
+       </div>
+-      <div className="flex items-center justify-between ow-full">
++      <div className="flex items-center justify-between gap-3">
+         <Nav
+           menu={[
+             {
+Index: frontend/src/app/_components/molecules/header/Mobile.tsx
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import { UserIcon } from \"lucide-react\";\r\nimport { MenuIcon, SearchIcon } from \"../../atoms/Icons\";\r\n\r\nconst Mobile = () => {\r\n  return (\r\n    <div className=\"container mx-auto flex justify-between px-3 items-center lg:hidden\">\r\n      <MobileLeft />\r\n      <h3>Trips n Hops</h3>\r\n      <MobileRight />\r\n    </div>\r\n  );\r\n};\r\n\r\nexport default Mobile;\r\n\r\nconst MobileLeft = () => {\r\n  return (\r\n    <div className=\"flex\">\r\n      <MenuIcon className=\"h-7 w-7\" />\r\n    </div>\r\n  );\r\n};\r\n\r\nconst MobileRight = () => {\r\n  return (\r\n    <div className=\"flex gap-5 items-center\">\r\n      <SearchIcon className=\"h-7 w-7\" />\r\n      <UserIcon className=\"h-7 w-7\" />\r\n    </div>\r\n  );\r\n};\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/frontend/src/app/_components/molecules/header/Mobile.tsx b/frontend/src/app/_components/molecules/header/Mobile.tsx
+--- a/frontend/src/app/_components/molecules/header/Mobile.tsx	(revision edcc94b1e9d6c227c77b8dbfc7a7dd82253c6243)
++++ b/frontend/src/app/_components/molecules/header/Mobile.tsx	(date 1737995695860)
+@@ -3,7 +3,7 @@
+ 
+ const Mobile = () => {
+   return (
+-    <div className="container mx-auto flex justify-between px-3 items-center lg:hidden">
++    <div className="w-full px-0.5 flex justify-between items-center lg:hidden">
+       <MobileLeft />
+       <h3>Trips n Hops</h3>
+       <MobileRight />
+Index: frontend/src/app/layout.tsx
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import type { Metadata } from \"next\";\r\nimport { DM_Sans } from \"next/font/google\";\r\nimport \"./globals.css\";\r\n\r\nconst dmSans = DM_Sans({\r\n  subsets: [\"latin\"],\r\n  weight: [\"100\", \"200\", \"300\", \"400\", \"500\", \"600\", \"700\", \"800\", \"900\"],\r\n  style: [\"normal\", \"italic\"],\r\n  display: \"swap\",\r\n});\r\n\r\nexport const metadata: Metadata = {\r\n  title: \"Trips n Hops\",\r\n  description: \"Generated by create next app\",\r\n};\r\n\r\nimport Header from \"./_components/organisms/Header\";\r\nimport Footer from \"./_components/organisms/Footer\";\r\nimport TrendingDestinations from \"./_components/organisms/HomePage/TrendingDestinations\";\r\nimport SectionA from \"./_components/organisms/HomePage/SectionA\";\r\n\r\nexport default function RootLayout({\r\n  children,\r\n  Hero,\r\n  FeaturedTrips,\r\n}: Readonly<{\r\n  children: React.ReactNode;\r\n  Hero: React.ReactNode;\r\n  FeaturedTrips: React.ReactNode;\r\n}>) {\r\n  return (\r\n    <html lang=\"en\">\r\n      <body className={`${dmSans.className} antialiased`}>\r\n        <main>\r\n          <>\r\n            <Header />\r\n            {Hero}\r\n            {children}\r\n            {FeaturedTrips}\r\n            <TrendingDestinations />\r\n            <SectionA />\r\n            <Footer />\r\n          </>\r\n        </main>\r\n      </body>\r\n    </html>\r\n  );\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/frontend/src/app/layout.tsx b/frontend/src/app/layout.tsx
+--- a/frontend/src/app/layout.tsx	(revision edcc94b1e9d6c227c77b8dbfc7a7dd82253c6243)
++++ b/frontend/src/app/layout.tsx	(date 1737995695871)
+@@ -1,28 +1,27 @@
+ import type { Metadata } from "next";
+-import { DM_Sans } from "next/font/google";
++// import { DM_Sans } from "next/font/google";
+ import "./globals.css";
+ 
+-const dmSans = DM_Sans({
+-  subsets: ["latin"],
+-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+-  style: ["normal", "italic"],
+-  display: "swap",
+-});
++// const dmSans = DM_Sans({
++//   subsets: ["latin"],
++//   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
++//   style: ["normal", "italic"],
++//   display: "swap",
++// });
+ 
+ export const metadata: Metadata = {
+-  title: "Trips n Hops",
+-  description: "Generated by create next app",
++  title: {
++    default: "Trips n Hops",
++    template: "%s | Trips n Hops"
++    // absolute: "" // used to override the parent default and template segment
++},
++  description: "Trip N Hops",
+ };
+ 
+-import Header from "./_components/organisms/Header";
+-import Footer from "./_components/organisms/Footer";
+-import TrendingDestinations from "./_components/organisms/HomePage/TrendingDestinations";
+-import SectionA from "./_components/organisms/HomePage/SectionA";
++      // <body className={`${dmSans.className} antialiased`}>
+ 
+ export default function RootLayout({
+   children,
+-  Hero,
+-  FeaturedTrips,
+ }: Readonly<{
+   children: React.ReactNode;
+   Hero: React.ReactNode;
+@@ -30,18 +29,8 @@
+ }>) {
+   return (
+     <html lang="en">
+-      <body className={`${dmSans.className} antialiased`}>
+-        <main>
+-          <>
+-            <Header />
+-            {Hero}
+-            {children}
+-            {FeaturedTrips}
+-            <TrendingDestinations />
+-            <SectionA />
+-            <Footer />
+-          </>
+-        </main>
++      <body className={`antialiased`}>
++        {children}
+       </body>
+     </html>
+   );
