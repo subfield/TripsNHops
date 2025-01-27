@@ -4,25 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6cc14bca-95a1-453b-b147-a99e4a80f6e4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/tripsnhops.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/_components/organisms/HomePage/ContactPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/_components/atoms/Input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/_components/atoms/Input.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/_components/molecules/header/Index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/_components/molecules/header/Index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/_components/molecules/header/Large.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/_components/molecules/header/Large.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/_components/molecules/header/Mobile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/_components/molecules/header/Mobile.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/contact/layout.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/contact/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/contact/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/contact/template.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/template.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/template.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="6cc14bca-95a1-453b-b147-a99e4a80f6e4" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,18 +21,18 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "subfield"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;subfield&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/subfield/TripsNHops.git",
-    "accountId": "a2ef02b7-be7b-45b5-91e6-478cc084ddfd"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/subfield/TripsNHops.git&quot;,
+    &quot;accountId&quot;: &quot;a2ef02b7-be7b-45b5-91e6-478cc084ddfd&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -62,24 +44,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;from__subfield&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.start.executor&quot;: &quot;Run&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\user\\@scofield\\web\\2025\\january\\tripsnhops\\frontend\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.start.executor": "Run",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "ts.external.directory.path": "C:\\Users\\user\\@scofield\\web\\2025\\january\\tripsnhops\\frontend\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -150,11 +132,23 @@
       <updated>1737855605768</updated>
       <workItem from="1737855608161" duration="8351000" />
       <workItem from="1737993805957" duration="1442000" />
+      <workItem from="1738000998273" duration="603000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
