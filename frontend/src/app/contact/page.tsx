@@ -35,7 +35,7 @@ export default function Contact() {
           }`}
           rows={5}
         />
-        <Button>Send Message</Button>
+        <Button size="lg">Send Message</Button>
       </form>
     </section>
   );
